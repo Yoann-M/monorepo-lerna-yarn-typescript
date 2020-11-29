@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "build:watch": "lerna run build:watch --parallel"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.0"
+  }
+}
