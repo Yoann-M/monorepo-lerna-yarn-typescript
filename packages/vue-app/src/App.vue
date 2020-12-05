@@ -1,22 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
 
-    <ui-helloworld name="Stencil"/>
-    <ui-button type="info">SEND</ui-button>
+    <ui-helloworld name="Stencil" />
+    <ui-button type="info" @click="logBtnClick">SEND</ui-button>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import { Component, Vue } from "vue-property-decorator";
+import HelloWorld from "./components/HelloWorld.vue";
 
 @Component({
   components: {
     HelloWorld,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  logBtnClick(e: MouseEvent): void {
+    console.log("Emmited from Stencil Js Component", e);
+  }
+}
 </script>
 
 <style lang="scss">

@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'ui-button',
@@ -6,23 +6,30 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class UiButton {
-  
   /**
-   * type :  the style of the button
+    * Define the button style
    */
   @Prop() type: string = 'primary';
-
   /**
-   * To : Href url: 
+    * Emitted when the button is clicked
    */
-  @Prop() to: string = '';
+  @Event() btnClick: EventEmitter<MouseEvent>;
 
   render() {
     return (
-      <button class={`btn btn-${this.type}`}>
+      <button
+        onClick={(e) => this.btnClick.emit(e)}
+        class={`btn btn-${this.type}`}
+      >
         <slot></slot>
       </button>
     );
   }
+
+  // When clicked invert the state of the toggle property
+  // emitClick(e) {
+  //   console.log('emi click', e)
+  //   this.btnClick.emit('Clicked')
+  // }
 
 }

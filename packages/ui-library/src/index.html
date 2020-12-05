@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/ui-library.esm.js"></script>
-    <script nomodule src="/build/ui-library.js"></script>
-  </head>
-  <body>
-    <ui-helloworld msg="Stencil"></ui-helloworld>
-    <ui-button type="primary">Send</ui-button>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/ui-library.esm.js"></script>
+  <script nomodule src="/build/ui-library.js"></script>
+  <script>
+    window.addEventListener('btnClick', (e) => {
+      alert('btnClick Event happened');
+      console.log('btnClick Event happened', e);
+    }, false);
+
+  </script>
+</head>
+
+<body>
+  <ui-helloworld msg="Stencil"></ui-helloworld>
+  <ui-button type="info">Send</ui-button>
+</body>
+
 </html>

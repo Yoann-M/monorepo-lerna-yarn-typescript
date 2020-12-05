@@ -8,11 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UiButton {
         /**
-          * To : Href url:
-         */
-        "to": string;
-        /**
-          * type :  the style of the button
+          * Define the button style
          */
         "type": string;
     }
@@ -44,11 +40,11 @@ declare global {
 declare namespace LocalJSX {
     interface UiButton {
         /**
-          * To : Href url:
+          * Emitted when the button is clicked
          */
-        "to"?: string;
+        "onBtnClick"?: (event: CustomEvent<MouseEvent>) => void;
         /**
-          * type :  the style of the button
+          * Define the button style
          */
         "type"?: string;
     }
