@@ -5,6 +5,7 @@
 - Lerna v3
 - Yarn v1
 - TypeScript v4
+- Node v12 (needed by Stencil.js)
 
 ## Install project :
 ```bash

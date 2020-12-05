@@ -1,1 +1,1 @@
-export const add = (a: number, b: number): number => a + b;
+export { Components, JSX } from './components';
