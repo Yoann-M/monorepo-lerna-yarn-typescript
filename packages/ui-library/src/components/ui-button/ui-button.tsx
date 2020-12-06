@@ -2,8 +2,8 @@ import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'ui-button',
-  styleUrl: 'ui-button.css',
-  shadow: true,
+  styleUrl: 'ui-button.scss',
+  shadow: false,
 })
 export class UiButton {
   /**

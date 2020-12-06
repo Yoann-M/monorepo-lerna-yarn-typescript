@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { applyPolyfills, defineCustomElements } from "@iw/ui-library/loader";
+import '@iw/ui-library/dist/ui-library/ui-library.css'
 
 Vue.config.productionTip = false
 
