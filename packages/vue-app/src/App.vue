@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
 
     <ui-helloworld name="Stencil" />
-    <ui-button type="info" @click="logBtnClick">SEND</ui-button>
+    <ui-button type="info" @btnClick="logBtnClick">SEND</ui-button>
   </div>
 </template>
 
